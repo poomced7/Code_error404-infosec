@@ -1,0 +1,27 @@
+<?php
+$token = $_GET["token"];
+$showtoken = $conn->query("SELECT * FROM member WHERE token = '$token' ");
+while ($row = $showtoken->fetch_array()) {
+  $id = $row["qrkey"];
+  $point = $row["point"];
+  $name = $row["name"];
+  $lastname = $row["lastname"];
+  $user_status = $row["user_status"];
+}
+echo "<div style=\"font-size:120px;\"> $user_status </div>" ;
+
+$tokencheck = $conn->query("SELECT *FROM member WHERE token = '$token' ");
+if($tokencheck->num_rows <= 0){
+    $_SESSION["swal"] = "notify";
+    $title ="Token ไม่ถูกต้อง";
+    $text = "กรุณาลองใหม่อีกครั้ง";
+    $icon ="error";
+    $button = "ตกลง";
+    $link = "./?app=home";
+}else{
+echo "มีโทเคนจริง";
+}
+
+
+?>
+<p>00000</p>

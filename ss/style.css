@@ -1,0 +1,47 @@
+
+	#qr-canvas{
+		display:none;
+		width:240px;
+		height:240px;
+	
+	}
+
+	#outdiv{
+		width:240px;
+		height:240px;
+	}
+
+	#v{
+		width:500px;
+		height:500px;
+	}
+
+	@media screen and (max-width: 500px){
+		
+		#outdiv{
+			width:190px;
+			height:190px;
+		}
+		
+	    #v{
+			width:500px;
+			height:500px;
+		}
+		
+		@media screen and (max-device-width: 500px) 
+	              and (orientation:portrait){
+	  
+			#outdiv{
+				width:270px;
+				height:270px;
+
+			}
+			
+		    #v{
+				width:500px;
+				height:500px;
+			}
+		
+		}
+
+	}
